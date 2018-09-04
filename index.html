@@ -19,6 +19,30 @@
       <button name="shareButton" id="shareButton" >Share</button>
     </div>
   </section>
+    <video id="video" src="https://www.videvo.net/videvo_files/converted/2017_04/videos/170216A_023_BoyatWindow4_1080p.mp439692.mp4"></video>
+
+<button id="pipButton"></button>
+
+<script>
+  // Hide button if Picture In Picture is not supported.
+  pipButton.hidden = !document.pictureInPictureEnabled;
+
+  pipButton.addEventListener('click', function() {
+    // If there is no element in Picture In Picture yet, let's request Picture
+    // In Picture for the video, otherwise leave it.
+    if (!document.pictureInPictureElement) {
+      video.requestPictureInPicture()
+      .catch(error => {
+        // Video failed to enter Picture In Picture mode.
+      });
+    } else {
+      document.exitPictureInPicture()
+      .catch(error => {
+        // Video failed to leave Picture In Picture mode.
+      });
+    }
+  });
+</script>
   </body>
   <script>
   shareButton.addEventListener("click", async () => {
