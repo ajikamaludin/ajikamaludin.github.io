@@ -16,7 +16,18 @@
       <p class="subtitle">
         My first website with <strong>Bulma</strong>!
       </p>
+      <button name="shareButton" id="shareButton" >Share</button>
     </div>
   </section>
   </body>
+  <script>
+  shareButton.addEventListener("click", async () => {
+    try {
+      await navigator.share({ title: "Example Page", url: "" });
+      console.log("Data was shared successfully");
+    } catch (err) {
+      console.error("Share failed:", err.message);
+    }
+  });
+  </script>
 </html>
