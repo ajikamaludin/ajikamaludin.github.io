@@ -12,6 +12,7 @@ html,
 body {
 	height: 100%;
 	font-family: 'Josefin Sans', sans-serif;
+	overflow-x: hidden;
 }
 
 h1,
@@ -490,7 +491,12 @@ ol {
 	margin-top: 1px;
 	background: #cbcbcb;
 }
-
+/*---------------------
+	Quotes section
+----------------------*/
+.quotes-section {
+	background-color: #f9f9f6dc;
+}
 /*---------------------
 	Resume section
 ----------------------*/
