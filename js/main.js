@@ -10,15 +10,13 @@
 'use strict';
 
 
-// $(window).on('load', function() { 
+$(window).on('load', function() { 
 	/*------------------
 		Preloder
 	--------------------*/
-document.addEventListener("DOMContentLoaded", function() {
 	$(".loader").fadeOut(); 
 	$("#preloder").delay(400).fadeOut("slow");
 });
-// });
 /*------------------
 	Background set
 --------------------*/
