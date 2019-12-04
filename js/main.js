@@ -20,7 +20,8 @@ $(window).on('load', function() {
 /*------------------
 	Background set
 --------------------*/
-document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
 	$('.set-bg').each(function() {
 		var bg = $(this).data('setbg');
 		$(this).css('background-image', 'url(' + bg + ')');
