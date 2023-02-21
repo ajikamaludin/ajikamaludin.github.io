@@ -287,7 +287,7 @@
 							<div class="fact-box">
 								<div class="fact-content">
 									<img src="img/icon/1-w.png" alt="">
-									<h2>7</h2>
+									<h2 id="yearExp">7</h2>
 									<p>Years of Experience</p>
 								</div>
 							</div>
@@ -296,7 +296,7 @@
 							<div class="fact-box">
 								<div class="fact-content">
 									<img src="img/icon/2-w.png" alt="">
-									<h2>2</h2>
+									<h2>4</h2>
 									<p>Acivement</p>
 								</div>
 							</div>
@@ -368,6 +368,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		gtag('js', new Date());
 
 		gtag('config', 'UA-50624959-4');
+
+		document.onload = function(){
+			document.getElementById('yearExp').innerText = (new Date()).getFullYear() - 2015
+		}
 	</script>
 </body>
 </html>
